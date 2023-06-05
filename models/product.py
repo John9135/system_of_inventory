@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Float, Date
+from sqlalchemy import Column, Integer, String, Float
 from config.database import Base
 
 
@@ -11,6 +11,6 @@ class Product(Base):
     brand = Column(String)
     description = Column(String)
     price = Column(Float)
-    entry_date = Column(Date)
+    entry_date = Column(String)
     availability = Column(String)
     available_quantity = Column(Integer)
