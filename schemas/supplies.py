@@ -4,14 +4,16 @@ from typing import Optional
 
 class Supplies(BaseModel):
     id : Optional[int] = None
-    supplier_id : int = Field(su = 1, description="ForegnKey of supplier")
-    product_id : int = Field(pr = 1, description="ForeignKey of product")
+    sup_id : int = Field(su = 1, description="ForegnKey of supplier")
+    pro_id : int = Field(pr = 1, description="ForeignKey of product")
+    purchase_price: float = Field(description='Purchase price of product the product from the supplier')
 
     class Config:
         schema_extra = {
             "example":{
                 "id":1,
-                "supplier_id":2,
-                "product_id":2
+                "sup_id":2,
+                "pro_id":2,
+                "purchase_price":1250
             }
         }
